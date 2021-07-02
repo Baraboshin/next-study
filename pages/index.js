@@ -1,8 +1,14 @@
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Index() {
   return (
-    <div>
+    <>
+      <Head>
+        <title>Next Title</title>
+        <meta name={'name'} content="next, nextjs, javascript, react"/>
+        <meta name={'description'} content="next, nextjs, javascript, react"/>
+      </Head>
       <h1>Hello Next.JS!</h1>
       <p>
         <Link href="/about">
@@ -15,6 +21,6 @@ export default function Index() {
         </Link>
       </p>
       <p>Lorem ipsum</p>
-    </div>
+    </>
   )
 }
