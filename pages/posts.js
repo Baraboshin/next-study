@@ -1,26 +1,41 @@
 import {MainLayout} from "../layouts/mainlayout";
 import  { useState, useEffect } from 'react'
+import Link from "next/link";
 
-export default function About() {
-  const [posts, setPosts] = useState([])
+export default function About({ posts }) {
+  // const [posts, setPosts] = useState([])
 
-  useEffect(() => {
-    async function load() {
-      const response = await fetch('http://localhost:4200/posts')
-      const json = await response.json()
-      setPosts(json)
-      console.log(json)
-    }
-    load()
-  }, [])
+  // useEffect(() => {
+  //   async function load() {
+  //     const response = await fetch('http://localhost:4200/posts')
+  //     const json = await response.json()
+  //     setPosts(json)
+  //   }
+  //   load()
+  // }, [])
 
   return(
     <MainLayout title={'Posts Page'}>
       <h1>Posts</h1>
       <ul>
-        <li></li>
+        { posts.map(post => (
+          <li key={post.id}>
+            <Link href={'/post/[id]'} as={`/post/${post.id}`}>
+              <a>{post.id}</a>
+            </Link>
+          </li>
+        ))}
       </ul>
-      <pre>{JSON.stringify(posts)}</pre>
     </MainLayout>
   )
+}
+
+export async function getStaticProps() {
+  const response = await fetch('http://localhost:4200/posts')
+  const posts = await response.json()
+  return {
+    props: {
+      posts,
+    },
+  }
 }
