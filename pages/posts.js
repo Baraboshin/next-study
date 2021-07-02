@@ -1,12 +1,9 @@
-import Head from "next/head";
+import {MainLayout} from "../layouts/mainlayout";
 
 export default function About() {
   return(
-    <>
-      <Head>
-        <title>Posts Page</title>
-      </Head>
+    <MainLayout title={'Posts Page'}>
       <h1>Posts</h1>
-    </>
+    </MainLayout>
   )
 }
