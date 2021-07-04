@@ -1,9 +1,7 @@
-import {MainLayout} from "../../layouts/mainlayout";
-
-export default function Author() {
+export default function Index() {
   return(
-    <MainLayout title={'Author Page'}>
-      <h1>Author</h1>
-    </MainLayout>
+    <div>
+      <h1>About</h1>
+    </div>
   )
 }

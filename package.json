@@ -7,11 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "mock": "json-server -w db.json -p 4200 -d 450",
+    "mock": "json-server -w db.json -p 4200 ",
     "serve": "concurrently \"npm run dev\" \"npm run mock\""
   },
   "dependencies": {
-    "isomorphic-unfetch": "^3.1.0",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",

@@ -2,7 +2,7 @@ import {MainLayout} from "../layouts/mainlayout";
 import  { useState, useEffect } from 'react'
 import Link from "next/link";
 
-export default function About({ posts }) {
+export default function Posts({ posts }) {
   // const [posts, setPosts] = useState([])
 
   // useEffect(() => {
@@ -21,7 +21,7 @@ export default function About({ posts }) {
         { posts.map(post => (
           <li key={post.id}>
             <Link href={'/post/[id]'} as={`/post/${post.id}`}>
-              <a>{post.id}</a>
+              <a>{post.title}</a>
             </Link>
           </li>
         ))}
@@ -30,12 +30,10 @@ export default function About({ posts }) {
   )
 }
 
-export async function getStaticProps() {
+Posts.getInitialProps = async() => {
   const response = await fetch('http://localhost:4200/posts')
   const posts = await response.json()
   return {
-    props: {
-      posts,
-    },
+    posts,
   }
 }
