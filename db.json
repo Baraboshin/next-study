@@ -15,5 +15,8 @@
       "title": "React Post",
       "body": "Nam aliquet efficitur purus, ac placerat risus tempus eu. Vivamus molestie dui sed congue porta. Aliquam semper feugiat nunc, non tincidunt augue congue vel. Aenean at metus ut ex faucibus imperdiet. Suspendisse in sagittis lectus."
     }
-  ]
+  ],
+  "about": {
+    "title": "Страница про нас"
+  }
 }
