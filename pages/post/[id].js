@@ -37,12 +37,21 @@ export default function Post({ post: serverPost }) {
   )
 }
 
-Post.getInitialProps = async({ query, req }) => {
-  if (!req) return { post: null }
+// Post.getInitialProps = async({ query, req }) => {
+//   if (!req) return { post: null }
+//   const response = await fetch(`http://localhost:4200/posts/${query.id}`)
+//   const post = await response.json()
+//   return {
+//     post,
+//   }
+// }
+
+export async function getServerSideProps({ query, req }) {
   const response = await fetch(`http://localhost:4200/posts/${query.id}`)
   const post = await response.json()
   return {
-    post,
+    props: {
+      post,
+    }, // will be passed to the page component as props
   }
 }
-
