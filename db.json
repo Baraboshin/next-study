@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "JavaScript Post",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin, ipsum ut semper ullamcorper, ante libero viverra lacus, a tempus nibh elit luctus ligula."
+    },
+    {
+      "id": 2,
+      "title": "Next Post",
+      "body": "Ut vehicula in neque at pharetra. Curabitur nec tincidunt orci. Donec convallis tincidunt dolor at tincidunt. Praesent mattis, enim id ullamcorper facilisis, nulla tortor sollicitudin ligula, feugiat varius dui ligula mollis nunc."
+    },
+    {
+      "id": 3,
+      "title": "React Post",
+      "body": "Nam aliquet efficitur purus, ac placerat risus tempus eu. Vivamus molestie dui sed congue porta. Aliquam semper feugiat nunc, non tincidunt augue congue vel. Aenean at metus ut ex faucibus imperdiet. Suspendisse in sagittis lectus."
+    }
+  ],
+  "about": {
+    "title": "Страница про нас"
+  }
+}
