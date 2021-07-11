@@ -1,5 +1,6 @@
 import Router from "next/router";
 import {MainLayout} from "../../layouts/mainlayout";
+import {AboutInfo} from "../../interfaces/post";
 
 export default function About({ title }) {
   const linkClickHandler = () => {
@@ -15,8 +16,8 @@ export default function About({ title }) {
 }
 
 About.getInitialProps = async () => {
-  const response = await fetch('http://localhost:4200/about')
-  const data = await response.json()
+  const response = await fetch(`${process.env.API_URL}/about`)
+  const data: AboutInfo = await response.json()
   return {
     title: data.title
   }
